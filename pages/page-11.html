@@ -1,0 +1,109 @@
+
+<h1>Panels</h1>
+<p lead>Consists of a drawer and a main container.</p>
+<p lead>It is assumed that there will be a toolbar at the main content.</p>
+<hr>
+<h3>USE</h3>
+<p lead><code>panel|[nodim|alwayshide|fullheight]</code></p>
+<p lead> &plus; <code>drawer</code></p>
+<p lead> &plus; <code>main</code></p>
+<hr>
+<p italic><code>nodim</code> &mdash; Drawer doesn't dim the toolbar(fixed) when opened.</p>
+<p italic><code>alwayshide</code> &mdash; Always hides the drawer even at big screens.</p>
+<p italic><code>fullheight</code> &mdash; Takes up the full height of the screen. This is useful if you don't have a toolbar or is on scroll mode.</p>
+<p>When having a <code>toolbar</code> at the <code>main</code> element, the content should have a <code>content</code> attribute.</p>
+<p italic><code>panel-target={id}</code> &mdash; to be attached onto an element to toggle the drawer, targeting the panel <code>id</code>.</p>
+<hr>
+<h3>EXAMPLE</h3>
+<textarea fluid disabled noresize code style="height: 160px">
+&lt;div panel fullheight id="panel"&gt;
+  &lt;div drawer&gt;
+    Drawer content...
+  &lt;/div&gt;
+  &lt;div main&gt;
+    Main content...
+    &lt;button panel-target="panel"&gt;Show drawer&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<iframe fluid height="200" src="demo/panel1.html"></iframe>
+<hr>
+<h3>EXAMPLE</h3>
+<textarea fluid disabled noresize code style="height: 265px">
+&lt;div panel id="panel"&gt;
+  &lt;div drawer&gt;
+    Drawer content...
+  &lt;/div&gt;
+  &lt;div main&gt;
+    &lt;div toolbar bg-amber&gt;
+      &lt;span ripple left panel-target="panel"&gt;
+        &lt;i icon="menu"&gt;&lt;/i&gt;
+      &lt;/span&gt;
+      &lt;header title&gt;Title&lt;/header&gt;
+    &lt;/div&gt;
+    &lt;div content&gt;
+      Content here...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<iframe fluid height="200" src="demo/panel2.html"></iframe>
+<hr>
+<h3>EXAMPLE</h3>
+<textarea fluid disabled noresize code style="height: 490px">
+&lt;div panel nodim id="panel"&gt;
+  &lt;div drawer&gt;
+    &lt;div list&gt;
+      &lt;div item&gt; Item 1 &lt;/div&gt;
+      &lt;div item&gt; Item 2 &lt;/div&gt;
+      &lt;div item&gt; Item 3 &lt;/div&gt;
+      &lt;div item&gt; Item 4 &lt;/div&gt;
+      &lt;div item&gt; Item 5 &lt;/div&gt;
+      &lt;div item&gt; Item 6 &lt;/div&gt;
+      &lt;div item&gt; Item 7 &lt;/div&gt;
+      &lt;div item&gt; Item 8 &lt;/div&gt;
+      &lt;div item&gt; Item 9 &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div main&gt;
+    &lt;div toolbar bg-indigo900&gt;
+      &lt;span ripple left panel-target="panel"&gt;
+        &lt;i icon="menu"&gt;&lt;/i&gt;
+      &lt;/span&gt;
+      &lt;span ripple right&gt;
+        &lt;i icon="favorite"&gt;&lt;/i&gt;
+      &lt;/span&gt;
+      &lt;header title&gt;Title&lt;/header&gt;
+    &lt;/div&gt;
+    &lt;div content&gt;
+      &lt;div fluid card&gt;
+        Content here...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<iframe fluid height="200" src="demo/panel3.html"></iframe>
+<hr>
+<h3>EXAMPLE</h3>
+<textarea fluid disabled noresize code style="height: 230px">
+&lt;div toolbar bg-red seamed&gt;
+  &lt;span ripple left panel-target="panel"&gt;
+    &lt;i icon="menu"&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;div panel nodim id="panel"&gt;
+  &lt;div drawer&gt;
+    Drawer content...
+  &lt;/div&gt;
+  &lt;div main style="padding-top: 500px"&gt;
+    Main content...
+    &lt;button panel-target="panel"&gt;Show drawer&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<iframe fluid height="200" src="demo/panel4.html"></iframe>

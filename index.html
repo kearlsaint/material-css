@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+<title>Material CSS</title>
+<link rel="stylesheet" href="css/md-css.min.css">
+<link rel="stylesheet" href="css/md-icons.min.css">
+<script src="js/zepto.min.js"></script>
+<script src="js/velocity.min.js"></script>
+<style>
+html, body {
+	background: white !important;
+}
+[page] {
+	padding-top: 64px;
+	padding-bottom: 128px;
+}
+code {
+	color: #E91E63 !important;
+	background: white !important;
+	font-weight: 500 !important;
+	font-size: smaller;
+	border-bottom: thin solid #E91E63;
+	border-radius: 0 !important;
+}
+</style>
+</head>
+<body fluid material>
+	<div panel nodim id="panel1">
+		<div drawer style="padding-bottom: 64px">
+			<div smaller uppercase bold>Navigation</div>
+			<div list>
+				<div item ripple ripple-color="pink200" page-target="page1">
+					<span icon="info-outline"></span>
+					Get Started
+				</div>
+				<a item ripple ripple-color="pink200" href="dist/latest.zip">
+					<span icon="get-app"></span>
+					Download
+				</a>
+			</div>
+			<hr>
+			<div smaller uppercase bold>Components</div>
+			<div list>
+				<div item ripple ripple-color="pink200" page-target="page2">
+					<span icon="format-color-fill"></span>
+					Colors
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page3">
+					<span icon="format-color-text"></span>
+					Typography
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page4">
+					<span icon="layers"></span>
+					Z-Shadow
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page5">
+					<span icon="blur-on"></span>
+					Ripples
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page6">
+					<span icon="landscape"></span>
+					Icons
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page7">
+					<span icon="keyboard-return"></span>
+					Inputs &amp; Forms
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page8">
+					<span icon="pageview"></span>
+					Buttons
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page9">
+					<span icon="play-circle-fill"></span>
+					FAB
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page10">
+					<span icon="view-agenda"></span>
+					Cards
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page11">
+					<span icon="web"></span>
+					Panels
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page12">
+					<span icon="border-top"></span>
+					Toolbar
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page13">
+					<span icon="list"></span>
+					Lists
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page14">
+					<span icon="filter-1"></span>
+					Pages
+				</div>
+				<div item ripple ripple-color="pink200" page-target="page15">
+					<span icon="star-outline"></span>
+					Helpers
+				</div>
+			</div>
+			<hr>
+			<div style="padding: 8px" smaller align-right>
+				Material CSS<br>
+				by <a href="http://kearlsaint.github.io/" target="_blank"	fg-teal>kearlsaint</a>
+			</div>
+		</div>
+		<div main bg-white>
+			<div toolbar bg-teal seamed>
+				<span ripple left panel-target="panel1">
+					<span icon="menu"></span>
+				</span>
+				<header title>Material CSS</header>
+			</div>
+			<div content>
+				<div pages>
+					<div default page page-id="page1" page-title="Material CSS"></div>
+					<div page page-id="page2" page-title="Colors"></div>
+					<div page page-id="page3" page-title="Typography"></div>
+					<div page page-id="page4" page-title="Z-Shadow"></div>
+					<div page page-id="page5" page-title="Ripples"></div>
+					<div page page-id="page6" page-title="Icons"></div>
+					<div page page-id="page7" page-title="Inputs & Forms"></div>
+					<div page page-id="page8" page-title="Buttons"></div>
+					<div page page-id="page9" page-title="Floating Action Buttons"></div>
+					<div page page-id="page10" page-title="Cards"></div>
+					<div page page-id="page11" page-title="Panels"></div>
+					<div page page-id="page12" page-title="Toolbar"></div>
+					<div page page-id="page13" page-title="Lists"></div>
+					<div page page-id="page14" page-title="Pages"></div>
+					<div page page-id="page15" page-title="Helpers"></div>
+					<div page page-id="page16" page-title="Templates"></div>
+				</div><!-- end of pages -->
+			</div><!-- end of content -->
+		</div><!-- end of main -->
+	</div><!-- end of panel -->
+	<!-- load script at the end of the page -->
+	<script src="js/md-js.min.js"></script>
+	<!-- use Zepto to load pages -->
+	<script>
+		$(function(){
+			$('[page-id]').html('Loading Page...');
+			$('[page-id="page1"]').load('pages/page-1.html', ripple);
+			$('[page-id="page2"]').load('pages/page-2.html', ripple);
+			$('[page-id="page3"]').load('pages/page-3.html', ripple);
+			$('[page-id="page4"]').load('pages/page-4.html', ripple);
+			$('[page-id="page5"]').load('pages/page-5.html', ripple);
+			$('[page-id="page6"]').load('pages/page-6.html', ripple);
+			$('[page-id="page7"]').load('pages/page-7.html', ripple);
+			$('[page-id="page8"]').load('pages/page-8.html', ripple);
+			$('[page-id="page9"]').load('pages/page-9.html', ripple);
+			$('[page-id="page10"]').load('pages/page-10.html', ripple);
+			$('[page-id="page11"]').load('pages/page-11.html', ripple);
+			$('[page-id="page12"]').load('pages/page-12.html', ripple);
+			$('[page-id="page13"]').load('pages/page-13.html', ripple);
+			$('[page-id="page14"]').load('pages/page-14.html', ripple);
+			$('[page-id="page15"]').load('pages/page-15.html', ripple);
+			$('[page-id="page16"]').load('pages/page-16.html', ripple);
+		});
+	</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-57422211-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

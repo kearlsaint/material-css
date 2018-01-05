@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+<title>Material CSS Demo</title>
+<link rel="stylesheet" href="../css/md-css.css">
+<link rel="stylesheet" href="../css/md-icons.css">
+</head>
+<body material fluid>
+	<div panel id="panel">
+		<div drawer>
+			<div list>
+				<div item page-target="p1">Page 1</div>
+				<div item page-target="p2">Page 2</div>
+				<div item page-target="p3">Page 3</div>
+			</div>
+		</div>
+		<div main>
+			<div toolbar bg-red>
+				<div left panel-target="panel">
+					<div icon="menu"></div>
+				</div>
+				<div title>
+					Pages Demo
+				</div>
+			</div>
+			<div content>
+				<div pages>
+					<div page page-title="Page 1" page-id="p1">Page 1 content here...</div>
+					<div page page-title="Pages Demo" default page-id="p2">Page 2 content here.. This is the default page.</div>
+					<div page page-title="Page 3" page-id="p3">Page 3 content here...</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- load scripts at the end -->
+	<script src="../js/zepto.min.js"></script>
+	<script src="../js/velocity.min.js"></script>
+	<script src="../js/md-js.js"></script>
+</body>
+</html>

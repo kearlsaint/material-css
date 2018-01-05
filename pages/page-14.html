@@ -1,0 +1,44 @@
+
+<h1>Pages</h1>
+<p lead>A simple page function. No animations.</p>
+<hr>
+<h3>USE</h3>
+<p lead><code>pages</code></p>
+<p lead> &plus; <code>page|page-id={id}|page-title={title}|default</code></p>
+<p lead><code>page-target={id}</code></p>
+<p italic><code>default</code> &mdash; The default page to be opened when the site is loaded.</p>
+<p italic><code>page-id={id}</code> &mdash; To be used with an element with <code>page-target</code> attribute for it to show.</p>
+<p italic><code>page-title={title}</code> &mdash; The title of the page; used to change the text inside <code>toolbar > title</code>.</p>
+<p italic><code>page-target={id}</code> &mdash; Element to toggle the page with the same <code>id</code>. You get the idea.</p>
+<hr>
+<h3>EXAMPLE(with panel/toolbar/list)</h3>
+<textarea code disabled fluid noresize style="height: 410px">
+&lt;div panel id="panel"&gt;
+  &lt;div drawer&gt;
+    &lt;div list&gt;
+      &lt;div item page-target="p1"&gt;Page 1&lt;/div&gt;
+      &lt;div item page-target="p2"&gt;Page 2&lt;/div&gt;
+      &lt;div item page-target="p3"&gt;Page 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div main&gt;
+    &lt;div toolbar bg-red&gt;
+      &lt;div left panel-target="panel"&gt;
+        &lt;div icon="menu"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div title&gt;
+        Pages Demo
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div content&gt;
+      &lt;div pages&gt;
+        &lt;div page page-title="Page 1" page-id="p1"&gt;Page 1 content here...&lt;/div&gt;
+        &lt;div page page-title="Pages Demo" default page-id="p2"&gt;Page 2 content here.. This is the default page.&lt;/div&gt;
+        &lt;div page page-title="Page 3" page-id="p3"&gt;Page 3 content here...&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<iframe fluid height="400" src="demo/pages1.html"></iframe>

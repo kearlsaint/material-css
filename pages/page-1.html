@@ -1,0 +1,104 @@
+
+<style>[large] { font-size: 42px; color: #009688 }</style>
+<div style="margin-bottom: 80px">
+	<img style="width: 320px; vertical-align: middle" src="img/block.png">
+	<span style="min-width: 400px; display: inline-block">
+		<h1 fg-tealA700 thin style="font-size: 48px; position: relative">
+			Material CSS
+			<span lead lighter fg-teal700 style="position: absolute; top: 100%; left: 4px">
+				A lightweight framework based on Google's Material Design.
+			</span>
+		</h1>
+	</span>
+</div>
+<hr>
+<div fg-teal700>
+	<a raised button bg-teal fg-white ripple-color="tealA400" href="dist/latest.zip">
+		<i icon="get-app"></i>
+		get material css
+	</a>
+	<a raised button bg-teal fg-white ripple-color="tealA400" href="http://github.com/kearlsaint/material-css">
+		<i icon="visibility"></i>
+		view on github
+	</a>
+	<hr>
+	<h1 large>Compatibility</h1>
+	<div lead justified>Desktop browsers not older than 2 years should be fully supported (as of 2014).</div>
+	<div lead justified>Mobile browsers on the other hand are questionable.</div>
+	<div lead justified>Works best with webkits.</div>
+	<hr>
+	<h1 large>Let's Start!</h1>
+	<div lead>Download the .zip file if you haven't downloaded it yet.</div>
+	<div lead>An <code>index.html</code> will be available as a template.</div>
+	<div lead>Open it.</div>
+	<hr>
+	<h1 large>No More Classes!</h1>
+	<div lead justified>Material CSS uses attributes to define styles for ease &amp; simplicity.</div>
+	<hr>
+	<h1 large>The <span fg-pink>material</span> attribute?</h1>
+	<div lead>By default, <code>index.html</code> is incomplete.</div>
+	<div lead>So, your first goal is to make the site complete so it can use Material CSS &mdash; by adding a <code>material</code> attribute to the body element.</div>
+	<div italic bg-deep-orange card z-1 fluid><span icon="warning"></span> It is important to put <code>md-js.js</code> before the end of the body tag and not on the head.</div>
+	<textarea fluid disabled noresize code style="height: 140px">
+&lt;body material fluid&gt;
+  &lt;div toolbar seamed bg-blue&gt;
+    &lt;header title&gt;My First Material&lt;/header&gt;
+  &lt;/div&gt;
+  &lt;div content&gt;
+    Content here...
+  &lt;/div&gt;
+&lt;/body&gt;</textarea>
+	<div lead>Try it. It looks empty huh? Now replace everything with the following code.</div>
+	<textarea fluid disabled noresize code style="height: 680px">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no"&gt;
+&lt;title&gt;Material CSS Demo&lt;/title&gt;
+&lt;link rel="stylesheet" href="css/md-css.min.css"&gt;
+&lt;link rel="stylesheet" href="css/md-icons.min.css"&gt;
+&lt;/head&gt;
+&lt;body material fluid&gt;
+  &lt;div panel id="panel1"&gt;
+    &lt;div drawer bg-grey900&gt;
+      &lt;div list&gt;
+        &lt;a item href="demo.html"&gt;
+          &lt;span icon="home"&gt;&lt;/span&gt;
+          Home
+        &lt;/a&gt;
+        &lt;a item href="index.html"&gt;
+          &lt;span icon="favorite"&gt;&lt;/span&gt;
+          Material CSS
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- end of drawer --&gt;
+    &lt;div main&gt;
+      &lt;div toolbar seamed bg-blue&gt;
+        &lt;span left panel-target="panel1"&gt;
+          &lt;span icon="menu"&gt;&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;header title&gt;My First Material&lt;/header&gt;
+      &lt;/div&gt;
+      &lt;div content&gt;
+        &lt;div fluid card&gt;
+          &lt;h1&gt;Header&lt;/h1&gt;
+          &lt;p&gt;Blablabla...&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- end of main --&gt;
+  &lt;/div&gt;&lt;!-- end of panel --&gt;
+  &lt;!-- load scripts at the end --&gt;
+  &lt;script src="js/zepto.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/velocity.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/md-js.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+	<div lead>Now it doesn't look empty, yay! It should look like <a href="demo.html" target="_blank" fg-pink>this demo page</a>.</div>
+	<div lead>Check out the components (located at the left side) to learn more.</div>
+	<hr>
+	<br><br><br>
+	<a hover raised button href="http://www.google.com/design/">Google Design</a>
+	<a hover raised button href="https://www.polymer-project.org/">Polymer Project</a>
+	<a hover raised button href="https://customelements.io/">Custom Elements</a>
+	<a hover raised button href="https://github.com/FezVrasta/bootstrap-material-design/">Bootstrap Material Design</a>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+<title>Material CSS Demo</title>
+<link rel="stylesheet" href="css/md-css.css">
+<link rel="stylesheet" href="css/md-icons.css">
+</head>
+<body material fluid>
+	<div panel id="panel1">
+		<div drawer bg-grey900>
+			<div list>
+				<a item href="demo.html">
+					<span icon="home"></span>
+					Home
+				</a>
+				<a item href="index.html">
+					<span icon="favorite"></span>
+					Material CSS
+				</a>
+			</div>
+		</div><!-- end of drawer -->
+		<div main>
+			<div toolbar seamed bg-blue>
+				<span left panel-target="panel1">
+					<span icon="menu"></span>
+				</span>
+				<header title>My First Material</header>
+			</div>
+			<div content>
+				<div fluid card>
+					<h1>Header</h1>
+					<p>Blablabla...</p>
+				</div>
+			</div>
+		</div><!-- end of main -->
+	</div><!-- end of panel -->
+	<!-- load scripts at the end -->
+	<script src="js/zepto.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/md-js.js"></script>
+</body>
+</html>

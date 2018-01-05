@@ -1,0 +1,67 @@
+
+<h1>Toolbar</h1>
+<p lead>Acts as a navigation bar.</p>
+<p lead>The next element needs to be the container for the main data as the toolbar automatically adds a <i>margin-top</i> to its next element.</p>
+<hr>
+<h3>USE</h3>
+<p lead><code>toolbar|[seamed|scroll]</code></p>
+<p lead> &plus; <code>left</code></p>
+<p lead> &plus; <code>right</code></p>
+<p lead> &plus; <code>title</code></p>
+<hr>
+<p italic><code>seamed</code> &mdash; Removes the toolbar shadow.</p>
+<p italic><code>scroll</code> &mdash; Makes the toolbar scroll with the content</p>
+<p italic><code>left</code> &mdash; An icon at the left side of the toolbar.</p>
+<p italic><code>right</code> &mdash; An icon at the right side of the toolbar.</p>
+<p italic><code>title</code> &mdash; The title of the current page. This will change automatically when changing pages(see pages).</p>
+<hr>
+<h3>EXAMPLE(default)</h3>
+<textarea disabled code fluid noresize style="height: 200px">
+&lt;div toolbar&gt;
+  &lt;div left&gt;
+    &lt;div icon="menu"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div title&gt;
+    Title
+  &lt;/div&gt;
+  &lt;div right&gt;
+    &lt;div icon="star-outline"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<iframe fluid height="200" src="demo/toolbar1.html"></iframe>
+<hr>
+<h3>EXAMPLE(seamed)</h3>
+<textarea disabled code fluid noresize style="height: 200px">
+&lt;div toolbar seamed bg-lime&gt;
+  &lt;div left&gt;
+    &lt;div icon="menu"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div title&gt;
+    Title
+  &lt;/div&gt;
+  &lt;div right&gt;
+    &lt;div icon="star-outline"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<iframe fluid height="200" src="demo/toolbar2.html"></iframe>
+<hr>
+<h3>EXAMPLE(seamed + scroll)</h3>
+<textarea disabled code fluid noresize style="height: 200px">
+&lt;div toolbar scroll seamed bg-indigo&gt;
+  &lt;div left&gt;
+    &lt;div icon="menu"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div title&gt;
+    Title
+  &lt;/div&gt;
+  &lt;div right&gt;
+    &lt;div icon="star-outline"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<iframe fluid height="200" src="demo/toolbar3.html"></iframe>

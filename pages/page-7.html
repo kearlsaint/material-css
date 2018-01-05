@@ -1,0 +1,151 @@
+
+<h1>Inputs</h1>
+<p lead>Pretty basic inputs and styled textareas.</p>
+<p lead>You can add a <code>code</code> attribute to a <code>textarea</code> field for displaying codes.</p>
+<p lead>Checkboxes and radios are only in black.</p>
+<hr>
+<h3>USE</h3>
+<p>
+	<small bold>TEXTAREA</small><br>
+	<code lead>[vertical|horizontal]|noresize</code>
+</p>
+<p italic><small bold>CHECKBOXES/RADIOS</small> &mdash; Must be associated with a label.</p>
+<hr>
+<h3>EXAMPLE</h3>
+<textarea code noresize fluid disabled style="height: 290px">
+&lt;input type="text" placeholder="Text Input"&gt;
+&lt;input type="password" placeholder="Password"&gt;
+&lt;hr&gt;
+&lt;textarea&gt;Normal Textarea&lt;/textarea&gt;
+&lt;textarea vertical&gt;Vertically resizeable textarea&lt;/textarea&gt;
+&lt;textarea horizontal&gt;Horizontally resizeable textarea&lt;/textarea&gt;
+&lt;textarea noresize&gt;Non resizable textarea&lt;/textarea&gt;
+&lt;textarea fluid vertical&gt;Fluid vertical Textarea&lt;/textarea&gt;
+&lt;hr&gt;
+&lt;input type="radio" name="__radio" id="radio1" value="1"&gt;
+&lt;label for="radio1"&gt;Radio 1&lt;/label&gt;
+&lt;input type="radio" name="__radio" id="radio2" value="1"&gt;
+&lt;label for="radio2"&gt;Radio 2&lt;/label&gt;
+&lt;hr&gt;
+&lt;input type="checkbox" name="__cb" id="cb1" value="1"&gt;
+&lt;label for="cb1"&gt;Checkbox 1&lt;/label&gt;
+&lt;input type="checkbox" name="__cb" id="cb2" value="1"&gt;
+&lt;label for="cb2"&gt;Checkbox 2&lt;/label&gt;</textarea>
+<hr>
+<h3>OUTPUT</h3>
+<div>
+	<input type="text" placeholder="Text Input">
+	<input type="password" placeholder="Password">
+	<hr>
+	<textarea>Normal Textarea</textarea>
+	<textarea vertical>Vertically resizeable textarea</textarea>
+	<textarea horizontal>Horizontally resizeable textarea</textarea>
+	<textarea noresize>Non resizable textarea</textarea>
+	<textarea fluid vertical>Fluid vertical Textarea</textarea>
+	<hr>
+	<input type="radio" name="__radio" id="radio1" value="1">
+	<label for="radio1">Radio 1</label>
+	<input type="radio" name="__radio" id="radio2" value="1">
+	<label for="radio2">Radio 2</label>
+	<hr>
+	<input type="checkbox" name="__cb" id="cb1" value="1">
+	<label for="cb1">Checkbox 1</label>
+	<input type="checkbox" name="__cb" id="cb2" value="1">
+	<label for="cb2">Checkbox 2</label>
+	<div card bg-teal>
+		<input type="checkbox" name="__cb" id="cb3" value="1">
+		<label for="cb3">Checkbox 1</label>
+		<input type="checkbox" name="__cb" id="cb4" value="1">
+		<label for="cb4">Checkbox 2</label>
+	</div>
+</div>
+<hr>
+<h1>Forms</h1>
+<p lead>Forms can be vertical and horizontal</p>
+<h3>USE</h3>
+<div lead>
+	<code>vertical|horizontal</code> defaults to <code>vertical</code><br>
+	<code>label</code>s and <code>input</code>s should be inside a <code>control</code> attributed element<br>
+	<code>control</code>s should be a direct child of a form.
+</div>
+<hr>
+<h3>EXAMPLES</h3>
+<small bold>default/vertical form</small>
+<textarea noresize code fluid disabled style="height: 220px">
+&lt;form&gt;
+  &lt;div control&gt;
+    &lt;label&gt;Username&lt;/label&gt;
+    &lt;input type="text" placeholder="Username"&gt;
+  &lt;/div&gt;
+  &lt;div control&gt;
+    &lt;label&gt;Password&lt;/label&gt;
+    &lt;input type="password" placeholder="Password"&gt;
+  &lt;/div&gt;
+  &lt;div control align-right&gt;
+    &lt;button bg-teal ripple-color="tealA400"&gt;Log In&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+<form onsubmit="return false">
+	<div control>
+		<label>Username</label>
+		<input type="text" placeholder="Username">
+	</div>
+	<div control>
+		<label>Password</label>
+		<input type="password" placeholder="Password">
+	</div>
+	<div control align-right>
+		<button bg-teal ripple-color="tealA400">Log In</button>
+	</div>
+</form>
+<hr>
+<small bold>horizontal form</small>
+<textarea noresize code fluid disabled style="height: 220px">
+&lt;form horizontal&gt;
+  &lt;div control&gt;
+    &lt;label&gt;Username&lt;/label&gt;
+    &lt;input type="text" placeholder="Username"&gt;
+  &lt;/div&gt;
+  &lt;div control&gt;
+    &lt;label&gt;Password&lt;/label&gt;
+    &lt;input type="password" placeholder="Password"&gt;
+  &lt;/div&gt;
+  &lt;div control&gt;
+    &lt;button bg-teal ripple-color="tealA400"&gt;Log In&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+<form horizontal onsubmit="return false">
+	<div control>
+		<label>Username</label>
+		<input type="text" placeholder="Username">
+	</div>
+	<div control>
+		<label>Password</label>
+		<input type="password" placeholder="Password">
+	</div>
+	<div control>
+		<button bg-teal ripple-color="tealA400">Log In</button>
+	</div>
+</form>
+<hr>
+<textarea noresize code fluid disabled style="height: 170px">
+&lt;form horizontal onsubmit="return false"&gt;
+  &lt;div control&gt;
+    &lt;input type="search" placeholder="Search here..." style="width: 240px"&gt;
+  &lt;/div&gt;
+  &lt;div control&gt;
+    &lt;button bg-teal ripple-color="tealA400" nopadding&gt;
+      &lt;i icon="search"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+<form horizontal onsubmit="return false">
+	<div control>
+		<input type="search" placeholder="Search here..." style="width: 240px">
+	</div>
+	<div control>
+		<button bg-teal ripple-color="tealA400" nopadding>
+			<i icon="search"></i>
+		</button>
+	</div>
+</form>
